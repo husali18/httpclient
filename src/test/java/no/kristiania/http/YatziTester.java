@@ -1,4 +1,4 @@
-package no.kristiania.http;
+ package no.kristiania.http;
 
 import org.junit.jupiter.api.Test;
 
@@ -21,11 +21,6 @@ public class YatziTester {
             }
         }
         return amountsOfOnes;
-    }
-
-    public static void main(String args[]){
-
-        System.out.println();
     }
 
 }

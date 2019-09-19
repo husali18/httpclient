@@ -8,20 +8,24 @@ public class YatziTester {
 
     @Test
     void shouldCalculateForOnes() {
-        assertEquals(0, score("ONES", new int[] { 2, 3, 4, 5, 6 }));
-        assertEquals(3, score("ONES", new int[] { 2, 1, 4, 1, 1 }));
-        assertEquals(5, score("ONES", new int[] { 1, 1, 1, 1, 1 }));
+        assertEquals(0, scoreForOne("ONES", new int[] { 2, 3, 4, 5, 6 }));
+        assertEquals(3, scoreForOne("ONES", new int[] { 2, 1, 4, 1, 1 }));
+        assertEquals(5, scoreForOne("ONES", new int[] { 1, 1, 1, 1, 1 }));
     }
 
-    private int score(String ones, int[] randomOutcome) {
-        int amountsOfOnes = 0;
-        for (int i = 0; i < randomOutcome.length; i++){
-            if (randomOutcome[i] == 1){
-                amountsOfOnes = amountsOfOnes + randomOutcome[i];
+    private int scoreForOne(String yatziCategory, int[] dice) {
+        int amountOfOne = 0;
+        for (int die : dice){
+            if (die == 1){
+                amountOfOne = amountOfOne+1;
             }
         }
-        return amountsOfOnes;
+        return amountOfOne;
     }
+
+
+
+
 
 }
 
